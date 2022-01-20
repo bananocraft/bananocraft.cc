@@ -1,5 +1,5 @@
 +++
-title = "Currently Running Servers"
+title = "Bananocraft Servers"
 date = "2022-01-20T00:56:39-05:00"
 author = "mconstant"
 authorTwitter = "" #do not include @
