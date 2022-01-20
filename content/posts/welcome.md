@@ -1,5 +1,5 @@
 +++
-title = "Need Hordes of Testers"
+title = "Welcome"
 date = "2022-01-20T04:29:11-05:00"
 author = ""
 authorTwitter = "" #do not include @
@@ -8,17 +8,11 @@ description = ""
 showFullContent = true
 readingTime = false
 +++
-Calling all monkeys! Bring groups of friends/frenemies/randos onto the servers!
 
-It is now time to test the preliminary deploys of bebe, and benis, two new Bananocraft servers.
+- Invite as many others as you can when you go on
+  - It is more fun with others and you can only tip when others are online
 
-The more the merrier, since you can only tip while others are there.
-
-- Invite others
-- Take screenshots and send them to me
-- Have fun
-
-And use the following command cheatsheet:
+Use the following command cheatsheet:
 - /deposit
   - gives you a link with a QR code to deposit BAN
 - /bal
