@@ -33,7 +33,7 @@ paginate = 5
   [languages.en]
     languageName = "English"
     title = "Bananocraft"
-    subtitle = "Lists and statuses for Bananocraft servers"
+    subtitle = "Bananocraft Servers and Statuses"
     keywords = ""
     copyright = ""
     menuMore = "Show more"
