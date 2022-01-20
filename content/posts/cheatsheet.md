@@ -1,5 +1,5 @@
 +++
-title = "Welcome"
+title = "Cheatsheet"
 date = "2022-01-20T04:29:11-05:00"
 author = ""
 authorTwitter = "" #do not include @
@@ -8,11 +8,6 @@ description = ""
 showFullContent = true
 readingTime = false
 +++
-
-- Invite as many others as you can when you go on
-  - It is more fun with others and you can only tip when others are online
-
-Use the following command cheatsheet:
 - /deposit
   - gives you a link with a QR code to deposit BAN
 - /bal
@@ -23,6 +18,4 @@ Use the following command cheatsheet:
 - /withdraw <banano_address>
   - e.g. /withdraw ban_1dd7w8z7cx57e4u4h45rcr399zgpnfcsqi61ifbxcowoauox1i9sqosyd6wu
   - withdraws your in-game funds to a particular wallet
-
-Good luck, brave souls!
 
