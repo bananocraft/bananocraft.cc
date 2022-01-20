@@ -11,4 +11,4 @@ readingTime = false
 | server | paste this in minecraft multiplayer | minecraft version | max players | backup frequency | status         |
 |--------|-------------------------------------|-------------|------------------|----------------|------|
 | bebe   | bebe.bananocraft.cc                 | 1.18.1 Java Edition | 20          | hourly           | deployed for testing      |
-| benis  | benis.bananocraft.cc                | 1.18.1 Java Edition | 150         | hourly           | deploying soon |
+| benis  | benis.bananocraft.cc                | 1.18.1 Java Edition | 150         | hourly           | deployed for testing |
