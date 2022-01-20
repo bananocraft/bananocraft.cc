@@ -32,8 +32,8 @@ paginate = 5
 [languages]
   [languages.en]
     languageName = "English"
-    title = "Terminal"
-    subtitle = "A simple, retro theme for Hugo"
+    title = "Bananocraft"
+    subtitle = "Lists and statuses for Bananocraft servers"
     keywords = ""
     copyright = ""
     menuMore = "Show more"
