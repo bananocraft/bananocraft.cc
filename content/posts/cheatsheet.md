@@ -5,7 +5,7 @@ author = ""
 authorTwitter = "" #do not include @
 cover = ""
 description = ""
-showFullContent = true
+showFullContent = false
 readingTime = false
 +++
 - /deposit
