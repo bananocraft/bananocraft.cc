@@ -23,3 +23,15 @@ Bananocraft runs on a plugin that was created by a well known Banano community m
 
 # About bananocraft.cc
 This site, and the servers running on the bananocraft.cc domain are a "low maintenance" side project of mconstant. Nobody but you is responsible for your funds or your dignity / plz be smort, u / withdraw funds from your server accounts constantly and smile often.
+As much as possible all infrastructure here is:
+- Fungible/Immutable
+- Distributed
+- Fun...ky
+- FOSS
+- Checked into git and shared if appropriate
+- Meant to be shared and reused by anyone
+
+Tech used
+- akash.network "Unstoppable Cloud" as an aws alternative paid by crypto
+- fleek.co deploying on IPFS
+- storj.io for backups
