@@ -9,14 +9,15 @@ showFullContent = true
 readingTime = false
 +++
 ![In the mist](/bananocraftstrip.png)
-- /deposit
+- `/deposit`
     - gives you a link with a QR code to deposit BAN
-- /bal
+    - protip: press `t` after issuing the command so you can click on the link
+- `/bal`
     - shows your balance
-- /tip <amount> <player>
-    - e.g. /tip 1919 mconstant
+- `/tip <amount> <player>`
+    - e.g. `/tip 1919 mconstant`
     - tips an amount of BAN to a particular player
-- /withdraw <banano_address>
-    - e.g. /withdraw ban_1dd7w8z7cx57e4u4h45rcr399zgpnfcsqi61ifbxcowoauox1i9sqosyd6wu
+- `/withdraw <banano_address>`
+    - e.g. `/withdraw ban_1dd7w8z7cx57e4u4h45rcr399zgpnfcsqi61ifbxcowoauox1i9sqosyd6wu`
     - withdraws your in-game funds to a particular wallet
 
