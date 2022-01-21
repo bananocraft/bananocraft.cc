@@ -6,7 +6,7 @@ authorTwitter = "" #do not include @
 cover = ""
 description = ""
 showFullContent = true
-readingTime = false
+readingTime = true
 +++
 ![In the mist](/bananocraftstrip.png)
 
