@@ -9,6 +9,7 @@ showFullContent = true
 readingTime = false
 +++
 ![In the mist](/bananocraftstrip.png)
+# Commands
 - `/deposit`
     - gives you a link with a QR code to deposit BAN
     - protip: press `t` after issuing the command so you can click on the link
@@ -20,4 +21,8 @@ readingTime = false
 - `/withdraw <banano_address>`
     - e.g. `/withdraw ban_1someaddresshere`
     - withdraws your in-game funds to a particular wallet
+
+# Looking for a wallet to use with Bananocraft?
+Check out [Kalium](https://kalium.banano.cc)!
+![Kalium Screenshot](/kalium.png)
 
