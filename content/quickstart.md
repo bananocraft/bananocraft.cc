@@ -15,6 +15,10 @@ readingTime = true
 4. Click Multiplayer
 ![Multiplayer](/multiplayer.png)
 5. Add Bananocraft Servers
+   1. benis.bananocraft.cc
+   2. bebe.bananocraft.cc
+   3. bebito.bananocraft.cc
+   4. ...
 ![Add Server](/add_server.png)
 6. Join The Server
 ![Join Server](/join_server.png)
