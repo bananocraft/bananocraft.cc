@@ -43,3 +43,13 @@ paginate = 5
     [languages.en.params.logo]
       logoText = "Bananocraft"
       logoHomeLink = "/"
+
+  [languages.en.menu]
+    [[languages.en.menu.main]]
+      identifier = "cheatsheet"
+      name = "Cheatsheet"
+      url = "/cheatsheet"
+    [[languages.en.menu.main]]
+      identifier = "quickstart"
+      name = "Quickstart"
+      url = "/quickstart"
