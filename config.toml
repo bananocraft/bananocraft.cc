@@ -33,8 +33,8 @@ paginate = 5
   [languages.en]
     languageName = "English"
     title = "Bananocraft"
-    subtitle = "Bananocraft Servers and Statuses"
-    keywords = ""
+    subtitle = "Banano + Minecraft = Bananocraft"
+    keywords = "Banano Minecraft Akash IPFS storj web3"
     copyright = ""
     menuMore = "Show more"
     readMore = "Read more"
