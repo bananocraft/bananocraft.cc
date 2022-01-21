@@ -1,12 +1,22 @@
-1. Download Minecraft Java Edition 1.18.1
++++
+title = "Quickstart"
+date = "2022-01-20T04:29:11-05:00"
+author = "mconstant"
+authorTwitter = "" #do not include @
+cover = ""
+description = ""
+showFullContent = true
+readingTime = true
++++
+2. Download Minecraft Java Edition 1.18.1
 ![Download](/download.png)
-2. Launch Minecraft
+3. Launch Minecraft
 ![Launch](/launch.png)
-3. Click Multiplayer
+4. Click Multiplayer
 ![Multiplayer](/multiplayer.png)
-4. Add Bananocraft Servers
+5. Add Bananocraft Servers
 ![Add Server](/add_server.png)
-5. Join The Server
+6. Join The Server
 ![Join Server](/join_server.png)
-6. Welcome To Bananocraft
+7. Welcome To Bananocraft
 ![Welcome](/welcome.png)
