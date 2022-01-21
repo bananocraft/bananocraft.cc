@@ -48,7 +48,7 @@ paginate = 5
     [[languages.en.menu.main]]
       identifier = "about"
       name = "About"
-      url = "/about"
+      url = "/posts/about"
     [[languages.en.menu.main]]
       identifier = "cheatsheet"
       name = "Cheatsheet"
@@ -60,7 +60,7 @@ paginate = 5
     [[languages.en.menu.main]]
       identifier = "servers"
       name = "Servers"
-      url = "/posts/servers"
+      url = "/servers"
     [[languages.en.menu.main]]
       identifier = "uptime"
       name = "Uptime"
