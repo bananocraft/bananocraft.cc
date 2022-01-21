@@ -60,4 +60,4 @@ paginate = 5
     [[languages.en.menu.main]]
       identifier = "uptime"
       name = "Uptime"
-      url = "uptime"
+      url = "/uptime"
