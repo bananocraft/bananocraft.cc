@@ -14,9 +14,9 @@ Don't be an Asshole(tm)
 # Longform
 1. No Griefing,
 2. No Non-consensual PvP
-3. Don't start Drama
-4. Listen the Operators and report bad operator behavior to a Server Admin
-5. Don't utilize Exploits without permission
-6. No scamming
-7. No shilling
-8. No begging
+3. Don't Start Drama
+4. Listen to the Operators and Report Bad Operator Behavior to a Server Admin
+5. Don't Utilize Exploits Without permission
+6. No Scamming
+7. No Shilling
+8. No Begging
