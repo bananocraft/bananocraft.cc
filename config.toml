@@ -11,7 +11,7 @@ paginate = 5
   themeColor = "yellow"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
+  showMenuItems = 4
 
   # show selector to switch language
   showLanguageSelector = false
@@ -53,3 +53,11 @@ paginate = 5
       identifier = "quickstart"
       name = "Quickstart"
       url = "/quickstart"
+    [[languages.en.menu.main]]
+      identifier = "servers"
+      name = "Servers"
+      url = "/posts/servers"
+    [[languages.en.menu.main]]
+      identifier = "uptime"
+      name = "Uptime"
+      url = "uptime"
