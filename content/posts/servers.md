@@ -14,3 +14,5 @@ readingTime = false
 | bebe.bananocraft.cc    | survival / hard           |  cluster.provider-0.prod.ams1.akash.pub:31109     | 20          | hourly           | Deployed      |
 | benis.bananocraft.cc   | survival / hard             |  cluster.provider-0.prod.ams1.akash.pub:31805     | 150         | hourly           | Deployed |
 | bebito.bananocraft.cc   | creative             |  akash-cloud.nwbroadbandalliance.org:31053    | 20         | hourly           | Deployed |
+
+![Bebito](/bebito.png)
