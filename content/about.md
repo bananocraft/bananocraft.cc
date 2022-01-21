@@ -15,8 +15,8 @@ readingTime = false
 Yes, ser... now you can
 
 ![Banano](/banano.png)
-- Deposit and send funds to other players for whatever reason
-- Play a classic game with an added in-game cryptocurrency that is fast, feeless, and B.E.N.I.S. (If you have not been "yellow-pilled" enclicken [here](https://banano.cc/yellowpaper/))
+- Bridge the meatspace economy with the Minecraft Metaverse economy (check out [an example](https://www.youtube.com/watch?v=KR-cTu4XxLY))
+- Play a classic game enchanced by an added in-game cryptocurrency that is fast, feeless, and B.E.N.I.S. (If you have not been "yellow-pilled" enclicken [here](https://banano.cc/yellowpaper/))
 
 # The Banano Economy Minecraft Plugin
 Bananocraft is powered by a plugin that was created by Kirby, and it is open source with Java code available [here](https://github.com/Kirby1997/BananoCraft)
