@@ -25,7 +25,7 @@ Yes, ser... now you can
 
 # Can't Wait to Get Started?
 - Quickstart is [here](/quickstart)
-- or, if you just want servers, go [here](/posts/servers)
+- or, if you just want servers, go [here](/servers)
   
 # About bananocraft.cc
 This site, and the servers running on the bananocraft.cc domain are a "low maintenance" side project of mconstant. Nobody but you is responsible for your funds or your dignity / plz be smort, u / withdraw funds from your server accounts constantly and smile often.
