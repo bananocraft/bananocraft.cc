@@ -19,8 +19,10 @@ Yes, ser... now you can
 - Play a classic game enchanced by an added in-game cryptocurrency that is fast, feeless, and B.E.N.I.S. (If you have not been "yellow-pilled" yet, just click [here](https://banano.cc/yellowpaper/), fren)
 
 # The Banano Economy Minecraft Plugin
-Bananocraft runs on a plugin that was created by a well known Banano community member, Kirby, and it is open source with Java code available [here](https://github.com/Kirby1997/BananoCraft)
-
+- Bananocraft runs on a plugin that was created by a well known Banano community member, Kirby, and it is open source with Java code available [here](https://github.com/Kirby1997/BananoCraft)
+- Anybody can run their own server with Banano as an economy with this plugin :)
+  - That means you can, and, you should, make a Bananocraft server, too!
+  
 # About bananocraft.cc
 This site, and the servers running on the bananocraft.cc domain are a "low maintenance" side project of mconstant. Nobody but you is responsible for your funds or your dignity / plz be smort, u / withdraw funds from your server accounts constantly and smile often.
 As much as possible all infrastructure here is:
