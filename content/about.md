@@ -24,7 +24,8 @@ Bananocraft runs on a plugin that was created by a well known Banano community m
 # About bananocraft.cc
 This site, and the servers running on the bananocraft.cc domain are a "low maintenance" side project of mconstant. Nobody but you is responsible for your funds or your dignity / plz be smort, u / withdraw funds from your server accounts constantly and smile often.
 As much as possible all infrastructure here is:
-- Fungible/Immutable
+- Fungible
+- Immutable
 - Distributed
 - Fun...ky
 - FOSS
