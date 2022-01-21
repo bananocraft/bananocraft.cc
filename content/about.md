@@ -12,10 +12,14 @@ readingTime = false
 
 # Banano + Minecraft = Bananocraft
 
-Yes, ser... you can
+Yes, ser... now you can
+
 ![Banano](/banano.png)
 - Deposit and send funds to other players for whatever reason
-- Server operators and other monkeys can find new / fun ways to play minecraft enhanced by that wonderful DAG powered cryptocurrency disrupting the meme economy -- Banano
+- Play a classic game with an added in-game cryptocurrency that is fast, feeless, and B.E.N.I.S. (If you have not been "yellow-pilled" enclicken [here](https://banano.cc/yellowpaper/))
 
 # The Banano Economy Minecraft Plugin
 Bananocraft is powered by a plugin that was created by Kirby, and it is open source with Java code available [here](https://github.com/Kirby1997/BananoCraft)
+
+# About bananocraft.cc
+This site, and the servers running on the bananocraft.cc domain are a "low maintenance" side project of mconstant. "All Funds Safu" / Everything is MIT License / Not responsible for anything ... plz be smort, u / withdraw funds from the server daily and smile often.
