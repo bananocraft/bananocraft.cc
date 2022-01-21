@@ -22,4 +22,4 @@ Yes, ser... now you can
 Bananocraft runs on a plugin that was created by a well known Banano community member, Kirby, and it is open source with Java code available [here](https://github.com/Kirby1997/BananoCraft)
 
 # About bananocraft.cc
-This site, and the servers running on the bananocraft.cc domain are a "low maintenance" side project of mconstant. Not responsible for your funds or your dignity / Everything is MIT License / Not responsible for anything ... plz be smort, u / withdraw funds from your server accounts constantly and smile often.
+This site, and the servers running on the bananocraft.cc domain are a "low maintenance" side project of mconstant. Nobody but you is responsible for your funds or your dignity / plz be smort, u / withdraw funds from your server accounts constantly and smile often.
