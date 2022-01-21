@@ -8,6 +8,8 @@ description = ""
 showFullContent = true
 readingTime = true
 +++
+![Uptime](/uptime.png)
+
 Should you desire up-to-the-minute updates on service uptime and availability check this dedicated site,
 
 

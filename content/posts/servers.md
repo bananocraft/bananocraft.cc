@@ -8,8 +8,8 @@ description = ""
 showFullContent = true
 readingTime = false
 +++
-![Bananocraft](/bananocraft.png)
-| server | paste this in minecraft multiplayer | minecraft version | max players | backup frequency | status         |
-|--------|-------------------------------------|-------------|------------------|----------------|------|
-| bebe   | bebe.bananocraft.cc                 | 1.18.1 Java Edition | 20          | hourly           | deployed for testing      |
-| benis  | benis.bananocraft.cc                | 1.18.1 Java Edition | 150         | hourly           | deployed for testing |
+![Servers](/servers.png)
+| paste this connection string in minecraft multiplayer | alternate | max players | backup frequency | server admin notes         |
+|-------------------------------------|------------------|-------------|------------------|----------------
+| bebe.bananocraft.cc                 |  cluster.provider-0.prod.ams1.akash.pub:31109     | 20          | hourly           | DNS propagating for servers. can use alternate connection string      |
+| benis.bananocraft.cc                |  cluster.provider-0.prod.ams1.akash.pub:31805     | 150         | hourly           | DNS propagating for servers. can use alternate connection string |

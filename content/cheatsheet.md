@@ -8,6 +8,7 @@ description = ""
 showFullContent = true
 readingTime = false
 +++
+![In the mist](/bananocraft.png)
 - /deposit
     - gives you a link with a QR code to deposit BAN
 - /bal
