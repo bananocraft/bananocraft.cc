@@ -18,6 +18,6 @@ readingTime = false
     - e.g. `/tip 1919 mconstant`
     - tips an amount of BAN to a particular player
 - `/withdraw <banano_address>`
-    - e.g. `/withdraw ban_1dd7w8z7cx57e4u4h45rcr399zgpnfcsqi61ifbxcowoauox1i9sqosyd6wu`
+    - e.g. `/withdraw ban_1someaddresshere`
     - withdraws your in-game funds to a particular wallet
 
