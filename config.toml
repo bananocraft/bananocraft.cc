@@ -11,7 +11,7 @@ paginate = 5
   themeColor = "yellow"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 6
+  showMenuItems = 7
 
   # show selector to switch language
   showLanguageSelector = false
@@ -69,3 +69,7 @@ paginate = 5
       identifier = "rules"
       name = "Rules"
       url = "/rules"
+    [[languages.en.menu.main]]
+      identifier = "showcase"
+      name = "Showcase"
+      url = "/showcase"
