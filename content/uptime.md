@@ -1,6 +1,6 @@
 +++
 title = "Uptime"
-date = "2022-01-21T04:29:11-05:00"
+date = "2022-01-20T04:29:11-05:00"
 author = "mconstant"
 authorTwitter = "" #do not include @
 cover = ""
