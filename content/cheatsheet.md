@@ -23,6 +23,6 @@ readingTime = false
     - withdraws your in-game funds to a particular wallet
 
 # Looking for a wallet to use with Bananocraft?
-Check out [Kalium](https://kalium.banano.cc)!
-![Kalium Screenshot](/kalium.png)
+Try [Kalium](https://kalium.banano.cc)
+
 
