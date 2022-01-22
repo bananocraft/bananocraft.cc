@@ -12,8 +12,8 @@ readingTime = false
 | server link  | mode |alternate server link | max players | backup frequency | server admin notes         | maintenance windows |
 |-------------------------------------|----|-----------------|-------------|------------------|----------------|---------|
 | bebe.bananocraft.cc    | survival / hard           |  cluster.provider-0.prod.ams1.akash.pub:31109     | 20          | hourly           | Deployed      | Mon/Wed/Fri 8-10pm EST |
-| benis.bananocraft.cc   | survival / hard             |  cluster.provider-0.prod.ams1.akash.pub:31805     | 150         | hourly           | Deployed | Mon/Wed/Fri 8-10pm EST |
+| benis.bananocraft.cc   | survival / hard             |  cluster.provider-0.prod.ams1.akash.pub:31805     | 150         | hourly           | Deployed | Mon/Wed/Fri 7-10pm EST |
 | bebito.bananocraft.cc   | creative             |  akash-cloud.nwbroadbandalliance.org:31053    | 20         | hourly           | Deployed | Tue/Thurs 8-10pm EST |
 | test.bananocraft.cc | creative | cluster.provider-0.prod.sjc1.akash.pub:30749 | 20 | hourly | Deployed. DNS Propagating. Uses a new test bananonode from JARVRM |  Tue/Thurs 8-10pm EST |
 
-![Bebito](/bebito.png)
+![Bebito](/bebito.png)  
