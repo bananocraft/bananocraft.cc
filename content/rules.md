@@ -9,7 +9,7 @@ showFullContent = true
 readingTime = true
 +++
 # TL;DR
-Don't be an Asshole(tm)
+Don't be an Jerkface(tm)
 
 # Longform
 1. No Griefing,
