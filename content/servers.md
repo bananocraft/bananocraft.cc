@@ -9,11 +9,11 @@ showFullContent = true
 readingTime = false
 +++
 ![Servers](/servers.png)
-| server link  | mode |alternate server link | max players | backup frequency | server admin notes         | maintenance windows |
-|-------------------------------------|----|-----------------|-------------|------------------|----------------|---------|
-| bebe.bananocraft.cc    | survival / hard           |  cluster.provider-0.prod.ams1.akash.pub:31109     | 20          | daily           | Deployed      | Mon/Wed/Fri 8-10pm EST |
-| benis.bananocraft.cc   | survival / hard             |  cluster.provider-0.prod.ams1.akash.pub:31887     | 150         | broken           | Deployed  | Mon/Wed/Fri 7-10pm EST |
-| bebito.bananocraft.cc   | creative             |  akash-cloud.nwbroadbandalliance.org:31053    | 20         | daily           | Deployed | Tue/Thurs 8-10pm EST |
-| test.bananocraft.cc | creative | cluster.provider-0.prod.sjc1.akash.pub:30749 | 20 | daily | Deployed. Uses a new test bananonode from JARVRM |  Tue/Thurs 8-10pm EST |
+| server link  | mode |alternate server link | max players |  server admin notes         | 
+|-------------------------------------|----|-----------------|---------------------|----------------|
+| bebe.bananocraft.cc    | survival / hard           |  cluster.provider-0.prod.ams1.akash.pub:31109     | 20          |  Deployed      |
+| benis.bananocraft.cc   | survival / hard             |  cluster.provider-0.prod.ams1.akash.pub:31887     | 150         |  Deployed  | 
+| bebito.bananocraft.cc   | creative             |  akash-cloud.nwbroadbandalliance.org:31053    | 20         |  Deployed |
+| test.bananocraft.cc | creative | cluster.provider-0.prod.sjc1.akash.pub:30749 | 20 |  Deployed. |  
 
 ![Bebito](/bebito.png)  
