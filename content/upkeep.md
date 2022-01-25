@@ -8,7 +8,7 @@ description = ""
 showFullContent = true
 readingTime = true
 +++
-Bananocraft is a labor of love and is made with volunteer time, effort and <3
+Bananocraft is a labor of love and is made with volunteer time, effort and <3`
 
 That does not mean it is free.
 
