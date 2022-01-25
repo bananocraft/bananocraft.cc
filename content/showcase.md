@@ -8,3 +8,4 @@ AllHailBanano
 ![Showcase Img 4](/showcase4.png)
 ![Showcase Img 5](/showcase5.png)
 ![Showcase Img 6](/showcase6.png)
+![Showcase Img 7](/showcase7.png)
