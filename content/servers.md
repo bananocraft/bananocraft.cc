@@ -11,8 +11,8 @@ readingTime = false
 ![Servers](/servers.png)
 | server link  | mode |alternate server link | max players |  server admin notes         | 
 |-------------------------------------|----|-----------------|---------------------|----------------|
-| bebe.bananocraft.cc    | survival / hard           |  cluster.provider-0.prod.ams1.akash.pub:31109     | 20          |  Deployed      |
-| benis.bananocraft.cc   | survival / hard             |  cluster.provider-0.prod.ams1.akash.pub:31887     | 150         |  Restoring from Backup on 2022-01-25 00:48:57  | 
+| bebe.bananocraft.cc    | survival / hard           |  cluster.provider-0.prod.ams1.akash.pub:31109     | 20          |  Restoring from Backup      |
+| benis.bananocraft.cc   | survival / hard             |  cluster.provider-0.prod.ams1.akash.pub:30162     | 150         |  Restored from Backup DNS propagating  | 
 | bebito.bananocraft.cc   | creative             |  akash-cloud.nwbroadbandalliance.org:31053    | 20         |  Deployed |
 
 ![Bebito](/bebito.png)  
