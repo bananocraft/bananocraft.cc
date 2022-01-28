@@ -11,8 +11,8 @@ readingTime = false
 ![Servers](/servers.png)
 | server link  | mode |alternate server link | max players |  server admin notes         | 
 |-------------------------------------|----|-----------------|---------------------|----------------|
-| bebe.bananocraft.cc    | survival / hard           |  akash-cluster01-atl1.dlinodes.com:30144     | 20          |  Deployed   |
-| benis.bananocraft.cc   | survival / hard             |  provider.chainzeroprovider.link:31641     | 150         |  Deploying / DNS propagating | 
+| bebe.bananocraft.cc    | survival / hard           | provider.chainzeroprovider.link:32229     | 20          |  Deploying   |
+| benis.bananocraft.cc   | survival / hard             |  provider.chainzeroprovider.link:31641     | 150         |  Deployed | 
 | bebito.bananocraft.cc   | creative             |  akash-cloud.nwbroadbandalliance.org:31053    | 20         |  Deployed |
 
 ![Bebito](/bebito.png)  
