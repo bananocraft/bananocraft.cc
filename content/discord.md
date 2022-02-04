@@ -6,7 +6,7 @@ authorTwitter = "" #do not include @
 cover = ""
 description = ""
 showFullContent = true
-readingTime = true
+readingTime = false
 +++
 We have a Discord server!
 
