@@ -39,6 +39,6 @@ As much as possible all infrastructure here is:
 - Meant to be shared and reused by anyone
 
 Tech used
-- akash.network "Unstoppable Cloud" as an aws alternative paid by crypto
-- fleek.co deploying on IPFS
+- Minecraft servers and infrastructure deployed on akash.network "Unstoppable Cloud" as an AWS alternative paid by crypto
+- This site is deployed on fleek.co using IPFS
 - storj.io for backups
