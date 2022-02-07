@@ -10,5 +10,5 @@ readingTime = false
 +++
 We have a Discord server!
 
-Please join [here](https://discord.gg/tyDg9J2dBW).
+Please join [here](https://discord.gg/27teTnuCNf).
 
