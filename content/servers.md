@@ -11,8 +11,7 @@ readingTime = false
 ![Servers](/servers.png)
 | server link  | mode |alternate server link | max players |  server admin notes         | 
 |-------------------------------------|----|-----------------|---------------------|----------------|
-| bebe.bananocraft.cc    | survival / hard           |  NA    | 20          |  Deployed   |
-| benis.bananocraft.cc   | survival / hard             |  NA     | 150         |  Deployed | 
+| benis.bananocraft.cc   | survival / hard             |  NA     | 150         |  upgrading/fixing | 
 | bebito.bananocraft.cc   | creative             |  NA   | 20         |  Deployed |
 
 ![Bebito](/bebito.png)  
