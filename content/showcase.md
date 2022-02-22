@@ -9,6 +9,7 @@ AllHailBanano
 ![Showcase Img 5](/showcase5.png)
 ![Showcase Img 6](/showcase6.png)
 ![Showcase Img 7](/showcase7.png)
+
 Build Contest 1 Results | Chungus_Monke
 
 Runner Up -- Scientifically Enhanced Banana (S.E.B)
