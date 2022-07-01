@@ -14,5 +14,3 @@ Should you desire up-to-the-minute updates on service uptime and availability ch
 
 
 [https://uptime.bananocraft.cc/status/bananocraftcc](https://uptime.bananocraft.cc/status/bananocraftcc "Uptime")
-
-
