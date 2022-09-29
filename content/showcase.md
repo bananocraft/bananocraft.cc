@@ -12,7 +12,7 @@ AllHailBanano
 
 Build Contest 1 Results | Contest Run By Chungus_Monke
 
-Runner Up -- Scientifically Enhanced Banana (S.E.B) by EymnWT
+Runner Up -- Scientifically Enlarged Banana (S.E.B) by EymnWT
 ![S.E.B.](/seb.png)
 
 Grand Prize -- The Airdrop One by __Sweepy
