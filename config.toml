@@ -62,10 +62,6 @@ paginate = 5
       name = "Servers"
       url = "/servers"
     [[languages.en.menu.main]]
-      identifier = "uptime"
-      name = "Uptime"
-      url = "/uptime"
-    [[languages.en.menu.main]]
       identifier = "rules"
       name = "Rules"
       url = "/rules"
