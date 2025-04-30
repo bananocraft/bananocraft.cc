@@ -5,6 +5,7 @@ paginate = 5
 
 [params]
   # dir name of your blog content (default is `content/posts`)
+  #
   contentTypeName = "posts"
 
   # ["orange", "blue", "red", "green", "pink"]
