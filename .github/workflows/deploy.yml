@@ -30,7 +30,7 @@ jobs:
 
       - name: Build with Docker
         run: |
-          docker build --build-arg HUGO_BASEURL="${{ steps.pages.outputs.base_url }}/" --target builder -t bananocraft-build .
+          docker build --target builder -t bananocraft-build .
           docker create --name build-container bananocraft-build true
           docker cp build-container:/src/public ./public
           docker rm build-container
