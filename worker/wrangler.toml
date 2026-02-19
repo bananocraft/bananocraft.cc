@@ -1,0 +1,17 @@
+name = "bananocraft-feed"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# Create this with: wrangler kv namespace create FEED_KV
+# Then paste the id below
+kv_namespaces = [
+  { binding = "FEED_KV", id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID" }
+]
+
+# Set your route to a subdomain, e.g. feed.bananocraft.cc
+# routes = [
+#   { pattern = "feed.bananocraft.cc/*", zone_name = "bananocraft.cc" }
+# ]
+
+# Or use a workers.dev subdomain during testing:
+# workers_dev = true
