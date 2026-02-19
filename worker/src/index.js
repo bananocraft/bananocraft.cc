@@ -1,5 +1,6 @@
 const MAX_EVENTS = 500;
 const EVENTS_KEY = "events";
+const LEADERBOARD_KEY = "leaderboard";
 
 export default {
   async fetch(request, env) {
@@ -20,6 +21,10 @@ export default {
 
     if (url.pathname === "/api/events" && request.method === "GET") {
       return handleGet(request, env, corsHeaders);
+    }
+
+    if (url.pathname === "/api/leaderboard" && request.method === "GET") {
+      return handleLeaderboard(request, env, corsHeaders);
     }
 
     return new Response("Not found", { status: 404, headers: corsHeaders });
@@ -53,25 +58,39 @@ async function handlePost(request, env, corsHeaders) {
     );
   }
 
+  const amt = Number(amount);
+  const playerName = String(player);
+
   const event = {
     id: `${Date.now()}-${crypto.randomUUID().slice(0, 8)}`,
-    player: String(player),
-    amount: Number(amount),
+    player: playerName,
+    amount: amt,
     action: String(action),
     timestamp: Date.now(),
   };
 
-  // Get existing events
+  // Update events list
   const existing = await env.FEED_KV.get(EVENTS_KEY, { type: "json" });
   const events = existing || [];
-
-  // Prepend new event, cap at MAX_EVENTS
   events.unshift(event);
   if (events.length > MAX_EVENTS) {
     events.length = MAX_EVENTS;
   }
 
-  await env.FEED_KV.put(EVENTS_KEY, JSON.stringify(events));
+  // Update leaderboard (case-insensitive player key, preserves display name)
+  const lb = (await env.FEED_KV.get(LEADERBOARD_KEY, { type: "json" })) || { since: Date.now(), players: {} };
+  const key = playerName.toLowerCase();
+  if (!lb.players[key]) {
+    lb.players[key] = { name: playerName, total: 0 };
+  }
+  lb.players[key].total += amt;
+  // Update display name to most recent casing
+  lb.players[key].name = playerName;
+
+  await Promise.all([
+    env.FEED_KV.put(EVENTS_KEY, JSON.stringify(events)),
+    env.FEED_KV.put(LEADERBOARD_KEY, JSON.stringify(lb)),
+  ]);
 
   return new Response(JSON.stringify({ ok: true, event }), {
     status: 201,
@@ -82,15 +101,35 @@ async function handlePost(request, env, corsHeaders) {
 async function handleGet(request, env, corsHeaders) {
   const url = new URL(request.url);
   const limit = Math.min(Math.max(parseInt(url.searchParams.get("limit") || "50", 10), 1), 200);
+  const offset = Math.max(parseInt(url.searchParams.get("offset") || "0", 10), 0);
 
   const existing = await env.FEED_KV.get(EVENTS_KEY, { type: "json" });
-  const events = (existing || []).slice(0, limit);
+  const all = existing || [];
+  const events = all.slice(offset, offset + limit);
+  const hasMore = offset + limit < all.length;
 
-  return new Response(JSON.stringify({ events }), {
+  return new Response(JSON.stringify({ events, hasMore, total: all.length }), {
     status: 200,
     headers: {
       "Content-Type": "application/json",
       "Cache-Control": "public, max-age=5",
+      ...corsHeaders,
+    },
+  });
+}
+
+async function handleLeaderboard(request, env, corsHeaders) {
+  const lb = (await env.FEED_KV.get(LEADERBOARD_KEY, { type: "json" })) || { since: Date.now(), players: {} };
+
+  // Sort players by total descending
+  const ranked = Object.values(lb.players)
+    .sort((a, b) => b.total - a.total);
+
+  return new Response(JSON.stringify({ since: lb.since, players: ranked }), {
+    status: 200,
+    headers: {
+      "Content-Type": "application/json",
+      "Cache-Control": "public, max-age=10",
       ...corsHeaders,
     },
   });

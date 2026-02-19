@@ -14,7 +14,7 @@ theme = "terminal-ban"
   themeColor = "yellow"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 10
+  showMenuItems = 11
 
   # show selector to switch language
   showLanguageSelector = false
@@ -84,3 +84,7 @@ theme = "terminal-ban"
       identifier = "feed"
       name = "Live Feed"
       url = "/feed"
+    [[languages.en.menu.main]]
+      identifier = "leaderboard"
+      name = "Leaderboard"
+      url = "/leaderboard"

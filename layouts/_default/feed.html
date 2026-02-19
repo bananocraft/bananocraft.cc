@@ -4,13 +4,40 @@
 
   <div class="post-content">
     <div id="feed-container">
+      <div id="feed-search-wrap">
+        <input type="text" id="feed-search" placeholder="Filter by player..." autocomplete="off" spellcheck="false" />
+      </div>
       <p id="feed-loading" style="color: var(--accent); font-family: monospace;">Loading feed...</p>
-      <ul id="feed-list" style="list-style: none; padding: 0; margin: 0;"></ul>
+      <ul id="feed-list"></ul>
+      <div id="feed-scroll-sentinel"></div>
     </div>
   </div>
 </div>
 
 <style>
+  #feed-search-wrap {
+    margin-bottom: 1rem;
+  }
+  #feed-search {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.4rem 0.6rem;
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: var(--color);
+    background: var(--background);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    outline: none;
+  }
+  #feed-search:focus {
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  #feed-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
   #feed-list li {
     padding: 0.5rem 0;
     border-bottom: 1px dashed var(--accent);
@@ -28,8 +55,14 @@
     color: #fbec5d;
     font-weight: bold;
   }
-  .feed-time {
+  .feed-timestamp {
+    display: block;
     color: #888;
+    font-size: 0.75rem;
+    margin-top: 0.15rem;
+  }
+  .feed-ago {
+    color: #aaa;
     font-size: 0.8rem;
     margin-left: 0.5rem;
   }
@@ -37,25 +70,27 @@
     color: #888;
     font-style: italic;
   }
+  #feed-scroll-sentinel {
+    height: 1px;
+  }
 </style>
 
 <script>
+(function() {
   var FEED_API = "https://feed.bananocraft.cc/api/events";
   var POLL_INTERVAL = 15000;
+  var BATCH_SIZE = 50;
 
-  function fetchFeed() {
-    fetch(FEED_API + "?limit=50")
-      .then(function(res) {
-        if (!res.ok) throw new Error("Feed unavailable");
-        return res.json();
-      })
-      .then(function(data) {
-        renderFeed(data.events);
-      })
-      .catch(function() {
-        document.getElementById("feed-loading").textContent =
-          "Feed currently unavailable. Check back soon!";
-      });
+  var allEvents = [];
+  var hasMore = true;
+  var loading = false;
+  var filterText = "";
+  var initialLoad = true;
+
+  function escapeHtml(str) {
+    var div = document.createElement("div");
+    div.textContent = str;
+    return div.innerHTML;
   }
 
   function timeAgo(ts) {
@@ -66,37 +101,134 @@
     return Math.floor(diff / 86400) + "d ago";
   }
 
-  function escapeHtml(str) {
-    var div = document.createElement("div");
-    div.textContent = str;
-    return div.innerHTML;
+  function formatLocalTime(ts) {
+    var d = new Date(ts);
+    return d.toLocaleString(undefined, {
+      year: "numeric", month: "short", day: "numeric",
+      hour: "2-digit", minute: "2-digit", second: "2-digit"
+    });
   }
 
-  function renderFeed(events) {
-    var loading = document.getElementById("feed-loading");
+  function makeEventHtml(e) {
+    return '<span class="feed-player">' + escapeHtml(e.player) + "</span>" +
+      " just found " +
+      '<span class="feed-amount">' + e.amount + " ban</span>" +
+      " while " + escapeHtml(e.action) +
+      '<span class="feed-ago">' + timeAgo(e.timestamp) + "</span>" +
+      '<span class="feed-timestamp">' + formatLocalTime(e.timestamp) + "</span>";
+  }
+
+  function matchesFilter(e) {
+    if (!filterText) return true;
+    return e.player.toLowerCase().indexOf(filterText) !== -1;
+  }
+
+  function renderAll() {
     var list = document.getElementById("feed-list");
-
-    loading.style.display = "none";
     list.innerHTML = "";
-
-    if (!events || events.length === 0) {
+    var visible = allEvents.filter(matchesFilter);
+    if (visible.length === 0) {
       list.innerHTML = '<li id="feed-empty">No rewards yet... go mine something!</li>';
       return;
     }
-
-    events.forEach(function(e) {
+    visible.forEach(function(e) {
       var li = document.createElement("li");
-      li.innerHTML =
-        '<span class="feed-player">' + escapeHtml(e.player) + "</span>" +
-        " just found " +
-        '<span class="feed-amount">' + e.amount + " banano</span>" +
-        " while " + escapeHtml(e.action) +
-        '<span class="feed-time">' + timeAgo(e.timestamp) + "</span>";
+      li.innerHTML = makeEventHtml(e);
       list.appendChild(li);
     });
   }
 
-  fetchFeed();
-  setInterval(fetchFeed, POLL_INTERVAL);
+  function appendEvents(events) {
+    var list = document.getElementById("feed-list");
+    var emptyEl = document.getElementById("feed-empty");
+    if (emptyEl) emptyEl.parentNode.removeChild(emptyEl);
+    events.forEach(function(e) {
+      if (!matchesFilter(e)) return;
+      var li = document.createElement("li");
+      li.innerHTML = makeEventHtml(e);
+      list.appendChild(li);
+    });
+  }
+
+  function fetchBatch(offset, cb) {
+    loading = true;
+    fetch(FEED_API + "?limit=" + BATCH_SIZE + "&offset=" + offset)
+      .then(function(res) {
+        if (!res.ok) throw new Error("Feed unavailable");
+        return res.json();
+      })
+      .then(function(data) {
+        loading = false;
+        hasMore = data.hasMore;
+        cb(data.events || []);
+      })
+      .catch(function() {
+        loading = false;
+        if (initialLoad) {
+          document.getElementById("feed-loading").textContent =
+            "Feed currently unavailable. Check back soon!";
+        }
+      });
+  }
+
+  function loadInitial() {
+    fetchBatch(0, function(events) {
+      document.getElementById("feed-loading").style.display = "none";
+      initialLoad = false;
+      allEvents = events;
+      renderAll();
+    });
+  }
+
+  function loadMore() {
+    if (loading || !hasMore) return;
+    fetchBatch(allEvents.length, function(events) {
+      allEvents = allEvents.concat(events);
+      appendEvents(events);
+    });
+  }
+
+  // Poll for new events (prepend to top)
+  function pollNew() {
+    if (allEvents.length === 0) {
+      loadInitial();
+      return;
+    }
+    fetch(FEED_API + "?limit=" + BATCH_SIZE + "&offset=0")
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        var newest = data.events || [];
+        if (newest.length === 0) return;
+        var existingIds = {};
+        allEvents.forEach(function(e) { existingIds[e.id] = true; });
+        var brandNew = newest.filter(function(e) { return !existingIds[e.id]; });
+        if (brandNew.length > 0) {
+          allEvents = brandNew.concat(allEvents);
+          renderAll();
+        }
+      })
+      .catch(function() {});
+  }
+
+  // Infinite scroll via IntersectionObserver
+  function setupInfiniteScroll() {
+    var sentinel = document.getElementById("feed-scroll-sentinel");
+    if (!("IntersectionObserver" in window)) return;
+    var observer = new IntersectionObserver(function(entries) {
+      if (entries[0].isIntersecting) loadMore();
+    }, { rootMargin: "200px" });
+    observer.observe(sentinel);
+  }
+
+  // Search / filter
+  document.getElementById("feed-search").addEventListener("input", function(ev) {
+    filterText = (ev.target.value || "").toLowerCase().trim();
+    renderAll();
+  });
+
+  loadInitial();
+  setupInfiniteScroll();
+  setInterval(pollNew, POLL_INTERVAL);
+})();
 </script>
 {{ end }}

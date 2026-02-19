@@ -1,0 +1,141 @@
+{{ define "main" }}
+<div class="post">
+  <h1 class="post-title">{{ .Title | markdownify }}</h1>
+
+  <div class="post-content">
+    <div id="lb-container">
+      <p id="lb-loading" style="color: var(--accent); font-family: monospace;">Loading leaderboard...</p>
+      <p id="lb-since" style="display:none; color: #888; font-size: 0.85rem; font-family: monospace;"></p>
+      <table id="lb-table" style="display:none;">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Player</th>
+            <th>Total BAN</th>
+          </tr>
+        </thead>
+        <tbody id="lb-body"></tbody>
+      </table>
+      <p id="lb-empty" style="display:none; color: #888; font-style: italic; font-family: monospace;">
+        No mining data yet... go find some banano!
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  #lb-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: monospace;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+  }
+  #lb-table th {
+    text-align: left;
+    padding: 0.4rem 0.8rem;
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  #lb-table td {
+    padding: 0.4rem 0.8rem;
+    border-bottom: 1px dashed var(--accent);
+  }
+  #lb-table tr:last-child td {
+    border-bottom: none;
+  }
+  .lb-rank {
+    color: #888;
+    min-width: 2rem;
+  }
+  .lb-rank-1 { color: #ffd700; font-weight: bold; }
+  .lb-rank-2 { color: #c0c0c0; font-weight: bold; }
+  .lb-rank-3 { color: #cd7f32; font-weight: bold; }
+  .lb-player {
+    color: var(--accent);
+    font-weight: bold;
+  }
+  .lb-total {
+    color: #fbec5d;
+    font-weight: bold;
+  }
+</style>
+
+<script>
+(function() {
+  var API = "https://feed.bananocraft.cc/api/leaderboard";
+
+  function escapeHtml(str) {
+    var div = document.createElement("div");
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function formatLocalTime(ts) {
+    var d = new Date(ts);
+    return d.toLocaleString(undefined, {
+      year: "numeric", month: "short", day: "numeric",
+      hour: "2-digit", minute: "2-digit"
+    });
+  }
+
+  function fetchLeaderboard() {
+    fetch(API)
+      .then(function(res) {
+        if (!res.ok) throw new Error("Leaderboard unavailable");
+        return res.json();
+      })
+      .then(function(data) {
+        render(data);
+      })
+      .catch(function() {
+        document.getElementById("lb-loading").textContent =
+          "Leaderboard currently unavailable. Check back soon!";
+      });
+  }
+
+  function render(data) {
+    document.getElementById("lb-loading").style.display = "none";
+
+    var sinceEl = document.getElementById("lb-since");
+    sinceEl.style.display = "block";
+    sinceEl.textContent = "Tracking since " + formatLocalTime(data.since);
+
+    var players = data.players || [];
+    if (players.length === 0) {
+      document.getElementById("lb-empty").style.display = "block";
+      return;
+    }
+
+    var table = document.getElementById("lb-table");
+    var tbody = document.getElementById("lb-body");
+    table.style.display = "table";
+    tbody.innerHTML = "";
+
+    players.forEach(function(p, i) {
+      var rank = i + 1;
+      var rankClass = "lb-rank";
+      if (rank <= 3) rankClass += " lb-rank-" + rank;
+      var medal = "";
+      if (rank === 1) medal = " \uD83E\uDD47";
+      else if (rank === 2) medal = " \uD83E\uDD48";
+      else if (rank === 3) medal = " \uD83E\uDD49";
+
+      var tr = document.createElement("tr");
+      tr.innerHTML =
+        '<td class="' + rankClass + '">' + rank + medal + "</td>" +
+        '<td class="lb-player">' + escapeHtml(p.name) + "</td>" +
+        '<td class="lb-total">' + p.total + " ban</td>";
+      tbody.appendChild(tr);
+    });
+  }
+
+  fetchLeaderboard();
+  // Refresh every 30s
+  setInterval(fetchLeaderboard, 30000);
+})();
+</script>
+{{ end }}
