@@ -43,6 +43,7 @@
     border-bottom: 1px dashed var(--accent);
     font-family: monospace;
     font-size: 0.95rem;
+    line-height: 1.6;
   }
   #feed-list li:last-child {
     border-bottom: none;
@@ -55,15 +56,11 @@
     color: #fbec5d;
     font-weight: bold;
   }
-  .feed-timestamp {
+  .feed-time {
     color: #888;
-    font-size: 0.75rem;
-    margin-left: 0.4rem;
-  }
-  .feed-ago {
-    color: #aaa;
     font-size: 0.8rem;
-    margin-left: 0.5rem;
+    margin-left: 0.4rem;
+    white-space: nowrap;
   }
   .feed-pickaxe {
     height: 1.1em;
@@ -108,19 +105,18 @@
   function formatLocalTime(ts) {
     var d = new Date(ts);
     return d.toLocaleString(undefined, {
-      year: "numeric", month: "short", day: "numeric",
-      hour: "2-digit", minute: "2-digit", second: "2-digit"
+      month: "short", day: "numeric",
+      hour: "2-digit", minute: "2-digit"
     });
   }
 
   function makeEventHtml(e) {
     return '<span class="feed-player">' + escapeHtml(e.player) + "</span>" +
-      " just found " +
+      " found " +
       '<span class="feed-amount">' + e.amount + " ban</span>" +
-      " while " + escapeHtml(e.action) +
+      " " + escapeHtml(e.action) +
       ' <img src="/bananominer_pickaxe.png" alt="⛏" class="feed-pickaxe" />' +
-      '<span class="feed-ago">' + timeAgo(e.timestamp) + "</span>" +
-      '<span class="feed-timestamp">' + formatLocalTime(e.timestamp) + "</span>";
+      '<span class="feed-time">' + timeAgo(e.timestamp) + " · " + formatLocalTime(e.timestamp) + "</span>";
   }
 
   function matchesFilter(e) {

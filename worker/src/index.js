@@ -1,6 +1,7 @@
 const MAX_EVENTS = 500;
 const EVENTS_KEY = "events";
 const LEADERBOARD_KEY = "leaderboard";
+const PLAYERS_KEY = "players";
 
 export default {
   async fetch(request, env) {
@@ -25,6 +26,14 @@ export default {
 
     if (url.pathname === "/api/leaderboard" && request.method === "GET") {
       return handleLeaderboard(request, env, corsHeaders);
+    }
+
+    if (url.pathname === "/api/players" && request.method === "POST") {
+      return handlePlayerUpdate(request, env, corsHeaders);
+    }
+
+    if (url.pathname === "/api/players" && request.method === "GET") {
+      return handlePlayerList(request, env, corsHeaders);
     }
 
     return new Response("Not found", { status: 404, headers: corsHeaders });
