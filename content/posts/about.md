@@ -42,4 +42,3 @@ Tech used
 - Minecraft servers and infrastructure deployed on akash.network "Unstoppable Cloud" as an AWS alternative paid by crypto
 - This site is deployed on fleek.co using IPFS
 - storj.io for backups
-- Our Banano Node runs on Hetzner Cloud
