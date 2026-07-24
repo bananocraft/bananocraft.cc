@@ -88,3 +88,15 @@ theme = "terminal-ban"
       identifier = "leaderboard"
       name = "Leaderboard"
       url = "/leaderboard"
+    [[languages.en.menu.main]]
+      identifier = "banano-miner"
+      name = "BananoMiner Guide"
+      url = "/banano-miner"
+    [[languages.en.menu.main]]
+      identifier = "banano-chests"
+      name = "Chests Guide"
+      url = "/banano-chests"
+    [[languages.en.menu.main]]
+      identifier = "jungletv"
+      name = "JungleTV Guide"
+      url = "/jungle-tv"

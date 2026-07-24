@@ -8,7 +8,7 @@ description = ""
 showFullContent = true
 readingTime = true
 +++
-2. Download Minecraft Java Edition 1.21.10
+2. Download Minecraft Java Edition 1.21.11
 ![Download](/download.png)
 3. Launch Minecraft
 ![Launch](/launch.png)

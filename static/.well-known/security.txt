@@ -1,0 +1,6 @@
+# security.txt — https://securitytxt.org/
+# RFC 9116
+
+Contact: mailto:bobbaxter@protonmail.com
+Expires: 2027-04-18T00:00:00.000Z
+Preferred-Languages: en
