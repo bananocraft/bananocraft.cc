@@ -16,7 +16,7 @@ The "rent" for keeping the servers up is handled by deducting from escrow amount
 
 All these escrow accounts are paid into from an Akash wallet, and the best way to help is by sending AKT to the following Akash wallet, 
 
-akash1yc6av7dvcypjmemshg3z826fj9ny2xgfxwhpth
+akash17z4um2t6w4573nyqrhtkpqu5e00meue5y8hn8t
 
 You can also make a splash by donating ban to the following good-natured fellow
 
