@@ -18,10 +18,6 @@ All these escrow accounts are paid into from an Akash wallet, and the best way t
 
 akash17z4um2t6w4573nyqrhtkpqu5e00meue5y8hn8t
 
-You can also make a splash by donating ban to the following good-natured fellow
+You can also make a splash by donating ban to the faucet wallet at
 
-![Tophat monKey](/tophat.png)
-
-![QR](/qr.png)
-
-ban_1axkoqzhu9ptekpciinpnzmi4or837amqryqszts6fakgdszanki81xu5ma1
+ban_3nocraftg4uhgxhth48xa5igrhkrhce7yzwdypsf3jkxsx96j9h6gm85f8fc
